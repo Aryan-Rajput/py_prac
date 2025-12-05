@@ -111,33 +111,21 @@ print(a1 ** 2)
 print(a1 % 2)
 
 # relational operations
-print(a1 > 5)
-print(a1 <= 8)
-print(a1 == 3)
-print(a1 != 10)
+print(a1 > 5)                               # [[ True  True  True  True]
+print(a1 <= 8)                              #  [ True  True  True  True]
+print(a1 == 3)                              #  [ True  True False  True]]
+print(a1 != 10) #---------------------------^
 
-# [[False False False False]
-#  [False False  True  True]
-#  [ True  True  True  True]]
-
-# [[ True  True  True  True]
-#  [ True  True  True  True]
-#  [ True False False False]]
-
-# [[False False False  True]
-#  [False False False False]
-#  [False False False False]]
-
-# [[ True  True  True  True]
-#  [ True  True  True  True]
-#  [ True  True False  True]]
 
 # vectorized operations
 print(a1 + a2)
 print(a1 * a2)
 print(a2 - a1)
 print(a2 / a1)
-print(a1 ** 2)
-print(a2 % 3)
+# print(a1 ** 2)
+# print(a2 % 3)
+
+
+
 
 
