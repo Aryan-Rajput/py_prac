@@ -85,4 +85,3 @@ print("Dot Product :\n", dot_product)
 # second row of a4 and first column of a5
 # (3*5) + (4*7) = 15 + 28 = 43
 # and so on ...
-
