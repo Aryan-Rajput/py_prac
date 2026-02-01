@@ -1,0 +1,5 @@
+Lab 2 — Narrow vs wide: groupBy causes shuffle
+
+Deep summary:
+reduceByKey combines locally before shuffle → less network than groupByKey.
+Interview line: “Prefer reduceByKey/aggregateByKey over groupByKey.”
