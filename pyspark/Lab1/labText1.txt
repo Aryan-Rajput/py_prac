@@ -1,0 +1,7 @@
+Lab 1 — RDD basics: transformations vs actions
+Goal: Understand laziness + lineage.\Interview test: “When does Spark actually compute?”
+
+
+Transformations build a DAG; actions trigger execution.
+Lineage lets Spark recompute partitions (fault tolerance).
+GS loves when you can say: “Spark is lazy; action triggers job; shuffle creates stage boundaries.”
