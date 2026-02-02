@@ -1,0 +1,5 @@
+Lab 3 — groupByKey vs reduceByKey memory trap
+
+groupByKey shuffles all values, can OOM.
+reduceByKey does map-side combine.
+This question is a classic filter for “Spark maturity.”

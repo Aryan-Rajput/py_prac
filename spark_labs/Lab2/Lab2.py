@@ -1,4 +1,4 @@
-# Lab1.py
+
 from spark_labs.lab_common import getspark  # adjust to your final package name
 
 
