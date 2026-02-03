@@ -1,26 +1,26 @@
 
--- objective: combine jump records with well_link data to compare 
---            the volts used in actual jumps vs the expected volts for that route.
+-- OBJECTIVE: COMBINE JUMP RECORDS WITH WELL_LINK DATA TO COMPARE 
+--            THE VOLTS USED IN ACTUAL JUMPS VS THE EXPECTED VOLTS FOR THAT ROUTE.
 
-select
-    j.jumpid,           -- unique identifier for each jump
-    j.frogid,           -- id of the frog that made the jump
-    j.fromwell,         -- starting well location
-    j.towell,           -- destination well location
-    j.voltsspent,       -- actual energy used by the frog
-    wl.voltscost as expectedcost  -- expected energy cost for this route
-from jump j
-join welllink wl
-    on j.fromwell = wl.fromwell
-    and j.towell   = wl.towell;
--- this result shows:
--- - each jump record paired with its corresponding route cost
--- - jumpid: the specific jump event being analyzed
--- - frogid: which frog made this jump
--- - fromwell and towell: the route taken
--- - voltsspent vs expectedcost: comparison of actual vs expected energy
---   (helps identify inefficient jumps where voltsspent > expectedcost,
---    or anomalies where voltsspent < expectedcost)
+SELECT
+    J.JUMPID,           -- UNIQUE IDENTIFIER FOR EACH JUMP
+    J.FROGID,           -- ID OF THE FROG THAT MADE THE JUMP
+    J.FROMWELL,         -- STARTING WELL LOCATION
+    J.TOWELL,           -- DESTINATION WELL LOCATION
+    J.VOLTSSPENT,       -- ACTUAL ENERGY USED BY THE FROG
+    WL.VOLTSCOST AS EXPECTEDCOST  -- EXPECTED ENERGY COST FOR THIS ROUTE
+FROM JUMP J
+JOIN WELLLINK WL
+    ON J.FROMWELL = WL.FROMWELL
+    AND J.TOWELL   = WL.TOWELL;
+-- THIS RESULT SHOWS:
+-- - EACH JUMP RECORD PAIRED WITH ITS CORRESPONDING ROUTE COST
+-- - JUMPID: THE SPECIFIC JUMP EVENT BEING ANALYZED
+-- - FROGID: WHICH FROG MADE THIS JUMP
+-- - FROMWELL AND TOWELL: THE ROUTE TAKEN
+-- - VOLTSSPENT VS EXPECTEDCOST: COMPARISON OF ACTUAL VS EXPECTED ENERGY
+--   (HELPS IDENTIFY INEFFICIENT JUMPS WHERE VOLTSSPENT > EXPECTEDCOST,
+--    OR ANOMALIES WHERE VOLTSSPENT < EXPECTEDCOST)
 
-select * from jump;
-select * from welllink;
+SELECT * FROM JUMP;
+SELECT * FROM WELLLINK;

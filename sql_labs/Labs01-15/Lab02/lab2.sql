@@ -1,14 +1,12 @@
-
 SELECT
-  j.jumpid, j.frogid, j.fromwell, j.towell,
-  wl.voltscost
-FROM jump j
-LEFT JOIN welllink wl
-  ON j.fromwell = wl.fromwell
-AND j.towell   = wl.towell
-WHERE wl.voltscost IS NULL;
--- there are no null results, meaning all jumps have corresponding welllink entries.
+  J.JUMPID, J.FROGID, J.FROMWELL, J.TOWELL,
+  WL.VOLTSCOST
+FROM JUMP J
+LEFT JOIN WELLLINK WL
+  ON J.FROMWELL = WL.FROMWELL
+AND J.TOWELL   = WL.TOWELL
+WHERE WL.VOLTSCOST IS NULL;
+-- THERE ARE NO NULL RESULTS, MEANING ALL JUMPS HAVE CORRESPONDING WELLLINK ENTRIES.
 
-
-select * from jump;
-select * from welllink;
+SELECT * FROM JUMP;
+SELECT * FROM WELLLINK;

@@ -1,12 +1,12 @@
 SELECT
-  COALESCE(j.fromwell, wl.fromwell) AS fromwell,
-  COALESCE(j.towell,   wl.towell)   AS towell,
-  j.jumpid,
-  wl.voltscost
-FROM jump j
-FULL JOIN welllink wl
-  ON j.fromwell = wl.fromwell
-AND j.towell   = wl.towell;
+  COALESCE(J.FROMWELL, WL.FROMWELL) AS FROMWELL,
+  COALESCE(J.TOWELL,   WL.TOWELL)   AS TOWELL,
+  J.JUMPID,
+  WL.VOLTSCOST
+FROM JUMP J
+FULL JOIN WELLLINK WL
+  ON J.FROMWELL = WL.FROMWELL
+AND J.TOWELL   = WL.TOWELL;
  
--- this shows all welllink entries and any jump entries that do not have a corresponding welllink entry
--- i.e. welllinks that were not used for any jumps
+-- THIS SHOWS ALL WELLLINK ENTRIES AND ANY JUMP ENTRIES THAT DO NOT HAVE A CORRESPONDING WELLLINK ENTRY
+-- I.E. WELLLINKS THAT WERE NOT USED FOR ANY JUMPS
